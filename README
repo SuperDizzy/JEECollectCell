@@ -1,0 +1,10 @@
+JEECollectCell介绍
+
+JEECollectCell是一个侧滑收藏的控件，也可以用做侧滑喜欢等功能，当收藏状态改变时会有一个弹起动画来提示用户收藏的状态已改变。
+
+
+
+JEECollectCell使用
+
+1.使用时直接用JEECollectTableViewCell初始化你的cell就可以了，cell的内容需要添加到cellMainView里边，同时为了保证cell的收藏状态被正确保存下来不至于被tableView的刷新或者cell的复用机制所扰乱，需要把被收藏的cell所在的位置存储下来，具体见demo。
+2.由于新添加视图导致cell无法响应didselect事件，所以提供了selectCellAtIndex代理方法来代替。
